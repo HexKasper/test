@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /success.html
+Disallow: /devino-viral.html
+Disallow: /qr.html
+
+Sitemap: https://instant-viral.vercel.app/sitemap.xml

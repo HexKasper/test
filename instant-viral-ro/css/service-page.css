@@ -1,0 +1,495 @@
+/* ═══════════════════════════════════════════════════════════
+   SERVICE PAGES - CSS dedicat
+═══════════════════════════════════════════════════════════ */
+
+/* ── SERVICE HERO ──────────────────────────────────────── */
+.service-hero {
+    padding: 2rem 0 4rem;
+    position: relative;
+}
+
+.service-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(108,99,255,0.1) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+.breadcrumbs {
+    margin-bottom: 2rem;
+}
+
+.breadcrumbs ol {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: '/';
+    margin-left: 0.5rem;
+    color: var(--text-muted);
+}
+
+.breadcrumbs a {
+    color: var(--text-sub);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent);
+}
+
+.breadcrumbs [aria-current="page"] {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.service-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 4rem;
+    align-items: center;
+}
+
+.service-hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.service-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    background: rgba(108,99,255,0.1);
+    border: 1px solid rgba(108,99,255,0.2);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.service-hero-text h1 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+.service-hero-desc {
+    font-size: 1.05rem;
+    color: var(--text-sub);
+    line-height: 1.7;
+    max-width: 580px;
+}
+
+.service-hero-desc strong {
+    color: var(--text);
+}
+
+.service-key-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1.5rem;
+}
+
+.key-point {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-sub);
+}
+
+.key-point svg {
+    flex-shrink: 0;
+}
+
+.service-cta-row {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.service-cta-row .btn {
+    padding: 0.75rem 1.75rem;
+}
+
+/* ── STATS ──────────────────────────────────────────────── */
+.service-hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── REQUIREMENTS ───────────────────────────────────────── */
+.service-requirements {
+    padding: 4rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.requirement-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+}
+
+.req-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    background: rgba(108,99,255,0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.requirement-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.requirement-card p {
+    font-size: 0.85rem;
+    color: var(--text-sub);
+    line-height: 1.6;
+}
+
+.requirement-card code {
+    background: var(--surface);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    color: var(--accent-2);
+}
+
+.requirements-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: rgba(251, 191, 36, 0.06);
+    border: 1px solid rgba(251, 191, 36, 0.15);
+    border-radius: var(--radius-sm);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.requirements-note p {
+    font-size: 0.9rem;
+    color: var(--text-sub);
+    line-height: 1.6;
+}
+
+.requirements-note p strong {
+    color: var(--text);
+}
+
+/* ── PACKAGES ───────────────────────────────────────────── */
+.service-packages {
+    padding: 4rem 0;
+    border-top: 1px solid var(--border);
+    background: linear-gradient(180deg, transparent, rgba(108,99,255,0.02), transparent);
+}
+
+.pricing-note {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(108,99,255,0.04);
+    border: 1px solid rgba(108,99,255,0.1);
+    border-radius: var(--radius-sm);
+}
+
+.pricing-note p {
+    font-size: 0.95rem;
+    color: var(--text-sub);
+}
+
+/* ── BENEFITS ───────────────────────────────────────────── */
+.service-benefits {
+    padding: 4rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.benefit-card:hover {
+    border-color: rgba(108,99,255,0.2);
+    transform: translateY(-2px);
+}
+
+.benefit-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 0.75rem;
+    background: rgba(108,99,255,0.08);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+}
+
+.benefit-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.benefit-card p {
+    font-size: 0.8rem;
+    color: var(--text-sub);
+    line-height: 1.6;
+}
+
+/* ── SERVICE FAQ ────────────────────────────────────────── */
+.service-faq {
+    padding: 4rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.service-faq .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .service-hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .service-hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .service-hero {
+        padding: 1rem 0 2rem;
+    }
+    
+    .service-key-points {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+    }
+    
+    .requirements-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+    
+    .requirement-card {
+        padding: 1.25rem;
+    }
+    
+    .req-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .req-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .service-hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .stat-card {
+        padding: 0.75rem;
+    }
+    
+    .stat-number {
+        font-size: 1.2rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+    
+    .benefit-card {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .requirements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-hero-stats {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.4rem;
+    }
+    
+    .stat-card {
+        padding: 0.6rem;
+    }
+    
+    .stat-number {
+        font-size: 1rem;
+    }
+    
+    .stat-label {
+        font-size: 0.6rem;
+    }
+    
+    .service-hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .service-hero-desc {
+        font-size: 0.9rem;
+    }
+    
+    .service-cta-row {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .service-cta-row .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .breadcrumbs {
+        font-size: 0.75rem;
+    }
+}
+/* ═══════════════════════════════════════════════════════════
+   SERVICE PAGES - Extensii pentru pachete
+═══════════════════════════════════════════════════════════ */
+
+/* Pachete grid - asigură că se afișează corect */
+.pkg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.pkg-grid.active {
+    display: grid !important;
+}
+
+/* Responsive pentru pachete */
+@media (max-width: 768px) {
+    .pkg-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pkg-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+}
+
+/* Asigură vizibilitatea pachetelor */
+.pkg-card {
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.pkg-card .btn-select {
+    cursor: pointer;
+}
+
+/* Animație pentru FAQ */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.open .faq-answer {
+    max-height: 500px;
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(45deg);
+}
